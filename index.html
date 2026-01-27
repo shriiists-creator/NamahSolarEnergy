@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Namah Solar Energy - Premier Solar Solutions in Vadodara. Rooftop solar, industrial EPC, and PM Surya Ghar subsidy experts.">
+    <title>Namah Solar Energy | Turn Your Roof Into a Power Plant</title>
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Brand Colors: Sun Yellow + Charcoal (Minimal & Premium) */
+            --primary: #1F2933;
+            /* Charcoal */
+            --primary-light: #323F4B;
+            /* Light Charcoal */
+            --secondary: #E5E7EB;
+            /* Soft Grey */
+            --dark: #1F2933;
+            /* Charcoal Text */
+            --light: #FFFFFF;
+            /* White Background */
+            --accent: #FFD60A;
+            /* Sun Yellow */
+            --nav-height: 80px;
+
+            /* Bootstrap Overrides */
+            --bs-primary: #1F2933;
+            /* Charcoal */
+            --bs-secondary: #E5E7EB;
+            /* Soft Grey */
+            --bs-success: #198754;
+            /* Standard Green for functional success */
+            --bs-info: #323F4B;
+            /* Light Charcoal */
+            --bs-warning: #FFD60A;
+            /* Sun Yellow */
+            --bs-dark: #1F2933;
+            /* Charcoal */
+            --bs-light: #FFFFFF;
+            /* White */
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            color: #444;
+            padding-top: var(--nav-height);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        /* --- Navigation --- */
+        .navbar {
+            height: var(--nav-height);
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            padding: 10px 0px;
+        }
+
+        .header-logo {
+            width: 70px;
+            height: 70px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark) !important;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-light) !important;
+        }
+
+        .btn-quote {
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            padding: 8px 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-quote:hover {
+            background: var(--dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        section {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        /* --- Home / Hero Section (Responsive Update) --- */
+        #hero {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: var(--dark);
+            padding: 0;
+        }
+
+        /* Swiper Container */
+        .hero-swiper {
+            width: 100%;
+            height: auto;
+            /* Let content dictate height on mobile */
+        }
+
+        /* Swiper Slide - Key Responsive Logic */
+        .hero-slide {
+            /* 1. Desktop: Fills screen. Mobile: Grows if content is tall */
+            min-height: calc(100vh - var(--nav-height));
+            height: auto;
+
+            /* 2. Positioning & Layout */
+            display: flex;
+            align-items: center;
+            /* Vertically center content */
+            position: relative;
+            box-sizing: border-box;
+
+            /* 3. Background Setup */
+            background-size: cover;
+            background-position: center;
+
+            /* 4. Critical Padding for Mobile */
+            /* Prevents content from hiding behind navbar or hitting edges */
+            padding: 80px 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            /* Gradient adapted for better text readability */
+            background: linear-gradient(90deg, rgba(0, 86, 179, 0.9) 0%, rgba(11, 28, 44, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        /* Typography & Elements */
+        .hero-title {
+            /* Fluid font size: scales between 2.5rem and 4rem based on screen width */
+            font-size: clamp(2.2rem, 4vw, 3.6rem);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            color: white;
+            font-weight: 700;
+        }
+
+        .hero-badge {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Stats Box Responsive Styling */
+        .hero-stats-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 40px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            /* Allows wrapping on small screens */
+            gap: 20px;
+            max-width: 100%;
+        }
+
+
+
+        /* --- Benefits Section --- */
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            height: 100%;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--primary-light);
+            margin-bottom: 20px;
+        }
+
+        /* --- Subsidy Table --- */
+        .subsidy-table thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        .subsidy-row:hover {
+            background-color: var(--light);
+        }
+
+        /* --- Services (Isotope) --- */
+        .filters-button-group button {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 8px 20px;
+            margin: 5px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .filters-button-group button.active,
+        .filters-button-group button:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .service-item {
+            margin-bottom: 30px;
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .service-info {
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* --- Contact / Form --- */
+        #contact {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e6f2ff 100%);
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info-box {
+            padding: 30px;
+            height: 100%;
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info-box a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* --- Footer Styling --- */
+        footer {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 60px 0 20px;
+            font-size: 0.95rem;
+        }
+
+        .footer-logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+            /* Yellow/Gold Highlight */
+            transform: translateX(5px);
+            /* Slide effect */
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* --- Form Updates --- */
+        .form-label {
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        /* --- Process Timeline --- */
+        .step-card {
+            position: relative;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* --- Testimonials --- */
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            margin: 15px;
+        }
+
+        .stars {
+            color: var(--accent);
+        }
+
+        /* --- FAQ Accordion --- */
+        .accordion-button:not(.collapsed) {
+            background-color: var(--light);
+            color: var(--primary);
+            box-shadow: none;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-item {
+            border: none;
+            margin-bottom: 10px;
+            border-radius: 10px !important;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+
+
+        @media (max-width: 991.98px) {}
+
+        /* Mobile Specific Adjustments */
+        @media (max-width: 768px) {
+            .hero-slide {
+                text-align: left;
+                /* Keep left align or change to center if preferred */
+            }
+
+            .hero-stats-box {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .hero-stats-box>div {
+                flex: 1;
+                /* Distribute space evenly */
+                text-align: center;
+            }
+
+            /* Hide vertical divider on really small screens to save space */
+            .vr {
+                display: none;
+            }
+
+            .subsidy-table thead {
+                display: none;
+                /* Hide standard headers */
+            }
+
+            .subsidy-table tbody tr {
+                display: block;
+                margin-bottom: 15px;
+                border: 1px solid #eee;
+                border-radius: 10px;
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+                overflow: hidden;
+            }
+
+            .subsidy-table tbody td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: right;
+                padding: 12px 15px !important;
+                border-bottom: 1px solid #f8f9fa;
+                font-size: 14px;
+            }
+
+            .subsidy-table tbody td:last-child {
+                border-bottom: none;
+                background-color: #f8fff9;
+                /* Light green highlight for money row */
+            }
+
+            /* Inject headers via CSS using data-label */
+            .subsidy-table tbody td::before {
+                content: attr(data-label);
+                font-weight: 700;
+                color: var(--primary);
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                margin-right: 20px;
+                text-align: left;
+            }
+
+            .filters-button-group button {
+                padding: 4px 14px;
+                font-size: 12px;
+                margin: 2px;
+            }
+
+            footer {
+                text-align: center;
+            }
+
+            .footerLogo {
+                justify-content: center;
+            }
+
+            .addressLi {
+                display: inline-block;
+                max-width: 202px;
+            }
+
+        }
+
+        @media (max-width: 575.98px) {}
+
+        @media (max-width: 425.98px) {
+            .filters-button-group {
+                justify-content: start !important;
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarContent" data-bs-offset="100">
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.webp" alt="" class="header-logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto align-items-lg-center" id="navbarContent">
+                        <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#subsidy">Subsidy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <a href="#contact" class="btn btn-quote">Get Free Quote</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide hero-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop');">
+                    <div class="hero-overlay"></div>
+                    <div class="container hero-content">
+                        <div class="row">
+                            <div class="col-lg-9 col-xl-8" data-aos="fade-up">
+
+                                <span class="hero-badge">PM Surya Ghar Yojana Authorized</span>
+
+                                <h1 class="hero-title">
+                                    Trusted Solar Experts in <br>
+                                    <span style="color:var(--accent);">Vadodara & Gujarat</span>
+                                </h1>
+
+                                <p class="lead text-white-50 mb-4" style="font-size: 1.2rem;">
+                                    Authorized Channel Partner for PM Surya Ghar Yojana. Get ₹78,000 Subsidy and ₹0
+                                    Electricity Bill. Quality Installation Guaranteed.
+                                </p>
+
+                                <div class="d-flex gap-3 flex-wrap">
+                                    <a href="#contact"
+                                        class="btn btn-light btn-lg rounded-pill fw-bold px-5 text-primary shadow-lg">Check
+                                        Eligibility</a>
+                                    <a href="tel:+919081999400"
+                                        class="btn btn-outline-light btn-lg rounded-pill fw-bold px-4">
+                                        <span class="iconify" data-icon="bx:phone-call"></span> Call Now
+                                    </a>
+                                </div>
+
+                                <div class="hero-stats-box">
+                                    <div>
+                                        <h3 class="mb-0 text-white fw-bold">₹78k</h3>
+                                        <small class="text-white-50">Max Subsidy</small>
+                                    </div>
+                                    <div class="vr bg-white opacity-50 mx-2"></div>
+                                    <div>
+                                        <h3 class="mb-0 text-white fw-bold">300</h3>
+                                        <small class="text-white-50">Free Units/Mo</small>
+                                    </div>
+                                    <div class="vr bg-white opacity-50 mx-2"></div>
+                                    <div>
+                                        <h3 class="mb-0 text-white fw-bold">25 Yr</h3>
+                                        <small class="text-white-50">Warranty</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide hero-slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2058&auto=format&fit=crop');">
+                    <div class="hero-overlay"></div>
+                    <div class="container hero-content">
+                        <div class="row">
+                            <div class="col-lg-9 col-xl-8" data-aos="fade-up">
+
+                                <span class="hero-badge bg-white text-primary">Industrial & Commercial Experts</span>
+
+                                <h1 class="hero-title">
+                                    Empower Your Business with <br>
+                                    <span style="color:var(--accent);">Namah Solar Energy</span>
+                                </h1>
+
+                                <p class="lead text-white-50 mb-4" style="font-size: 1.2rem;">
+                                    Maximize ROI with our Industrial EPC & Commercial Solar solutions. Timely project
+                                    completion and professional quality.
+                                </p>
+
+                                <div class="d-flex gap-3 flex-wrap">
+                                    <a href="#services"
+                                        class="btn btn-outline-light btn-lg rounded-pill fw-bold px-5">View Services</a>
+                                    <a href="#contact"
+                                        class="btn btn-primary btn-lg rounded-pill fw-bold px-5 border-0">Get Quote</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h5 class="text-primary text-uppercase letter-spacing">Why Choose Namah Solar?</h5>
+                <h2>Reliable Power, Honest Service</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon">
+                            <span class="iconify" data-icon="uil:money-bill-slash"></span>
+                        </div>
+                        <h4>Zero Electricity Bills</h4>
+                        <p class="text-muted">A 3kW system generates approx. 360 units/month, covering the bill for most
+                            2-3 BHK homes completely.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon">
+                            <span class="iconify" data-icon="carbon:chart-line-smooth"></span>
+                        </div>
+                        <h4>High ROI (3-4 Years)</h4>
+                        <p class="text-muted">Recover your installation cost quickly. Enjoy free electricity for the
+                            remaining 21+ years of the system's life.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card text-center">
+                        <div class="benefit-icon">
+                            <span class="iconify" data-icon="game-icons:gujarat"></span>
+                        </div>
+                        <h4>Trusted Workmanship</h4>
+                        <p class="text-muted">We use only premium quality cables and structures. Our elevated designs
+                            are safe and strong for Gujarat's kite flying season!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="subsidy" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1691421740425-48ff22b6d442?q=80&w=2070&auto=format&fit=crop"
+                        class="img-fluid rounded-4 shadow" alt="Solar Subsidy">
+                </div>
+                <div class="col-lg-7 ps-lg-5" data-aos="fade-left">
+                    <h5 class="text-primary">Government Scheme 2025-26</h5>
+                    <h2 class="mb-4">PM Surya Ghar: Muft Bijli Yojana</h2>
+                    <p class="mb-4">Get subsidy transferred directly to your bank account within 30 days of
+                        installation.</p>
+
+                    <div class="table-responsive bg-white rounded-3 shadow-sm">
+                        <table class="table table-hover mb-0 subsidy-table">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th class="p-3">Monthly Consumption</th>
+                                    <th class="p-3">System Size</th>
+                                    <th class="p-3">Subsidy Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="subsidy-row">
+                                    <td class="p-3" data-label="Monthly Consumption">0 - 150 Units</td>
+                                    <td class="p-3" data-label="System Size">1 kW - 2 kW</td>
+                                    <td class="p-3 fw-bold text-success" data-label="Subsidy Amount">₹30,000 - ₹60,000
+                                    </td>
+                                </tr>
+                                <tr class="subsidy-row">
+                                    <td class="p-3" data-label="Monthly Consumption">150 - 300 Units</td>
+                                    <td class="p-3" data-label="System Size">2 kW - 3 kW</td>
+                                    <td class="p-3 fw-bold text-success" data-label="Subsidy Amount">₹60,000 - ₹78,000
+                                    </td>
+                                </tr>
+                                <tr class="subsidy-row">
+                                    <td class="p-3" data-label="Monthly Consumption">Above 300 Units</td>
+                                    <td class="p-3" data-label="System Size">3 kW +</td>
+                                    <td class="p-3 fw-bold text-success" data-label="Subsidy Amount">Fixed ₹78,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4">
+                        <p class="small text-muted"><span class="iconify me-1" data-icon="bi:info-circle-fill"></span>
+                            We handle all paperwork and portal registration for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2>Our Services</h2>
+                <div class="filters-button-group mt-3 d-flex justify-content-center flex-wrap">
+                    <button class="active" data-filter="*">All</button>
+                    <button data-filter=".residential">Residential</button>
+                    <button data-filter=".commercial">Industrial</button>
+                    <button data-filter=".pumps">Solar Pumps</button>
+                </div>
+            </div>
+
+            <div class="row service-grid">
+                <div class="col-lg-4 col-md-6 service-item residential">
+                    <div class="service-card">
+                        <a href="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?q=80&w=1974&auto=format&fit=crop"
+                            data-fancybox="gallery" data-caption="Residential Rooftop Solar">
+                            <img src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?q=80&w=1974&auto=format&fit=crop"
+                                alt="Residential Solar">
+                        </a>
+                        <div class="service-info">
+                            <h4>Residential Rooftop</h4>
+                            <p class="text-muted small">Reduce home bills to zero with aesthetic rooftop solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item commercial">
+                    <div class="service-card">
+                        <a href="https://images.unsplash.com/photo-1566093097221-ac2335b09e70?q=80&w=2069&auto=format&fit=crop"
+                            data-fancybox="gallery" data-caption="Industrial Solar Plant">
+                            <img src="https://images.unsplash.com/photo-1566093097221-ac2335b09e70?q=80&w=2069&auto=format&fit=crop"
+                                alt="Industrial Solar">
+                        </a>
+                        <div class="service-info">
+                            <h4>Industrial EPC</h4>
+                            <p class="text-muted small">Turnkey solutions for factories and commercial complexes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item pumps">
+                    <div class="service-card">
+                        <a href="https://images.unsplash.com/photo-1561115867-be8460fbebfe?q=80&w=2070&auto=format&fit=crop"
+                            data-fancybox="gallery" data-caption="Solar Water Pump">
+                            <img src="https://images.unsplash.com/photo-1561115867-be8460fbebfe?q=80&w=2070&auto=format&fit=crop"
+                                alt="Solar Pump">
+                        </a>
+                        <div class="service-info">
+                            <h4>Solar Pumps</h4>
+                            <p class="text-muted small">Efficient irrigation solutions for agriculture without fuel
+                                costs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item residential">
+                    <div class="service-card">
+                        <a href="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1974&auto=format&fit=crop"
+                            data-fancybox="gallery" data-caption="Elevated Structure">
+                            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1974&auto=format&fit=crop"
+                                alt="Elevated Structure">
+                        </a>
+                        <div class="service-info">
+                            <h4>Elevated Structures</h4>
+                            <p class="text-muted small">Keep your terrace usable with our 6-8ft high raised structures.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 service-item residential commercial">
+                    <div class="service-card">
+                        <a href="https://images.unsplash.com/photo-1660330589257-813305a4a383?q=80&w=2070&auto=format&fit=crop"
+                            data-fancybox="gallery" data-caption="Solar Cleaning & Maintenance">
+                            <img src="https://images.unsplash.com/photo-1660330589257-813305a4a383?q=80&w=2070&auto=format&fit=crop"
+                                alt="Solar Cleaning">
+                        </a>
+                        <div class="service-info">
+                            <h4>Cleaning & Maintenance</h4>
+                            <p class="text-muted small">Professional panel cleaning and AMC services to ensure peak
+                                performance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 service-item commercial">
+                    <div class="service-card">
+                        <a href="https://images.unsplash.com/photo-1623287861648-307748a22a2b?q=80&w=2072&auto=format&fit=crop"
+                            data-fancybox="gallery" data-caption="Solar Street Lights">
+                            <img src="https://images.unsplash.com/photo-1623287861648-307748a22a2b?q=80&w=2072&auto=format&fit=crop"
+                                alt="Street Lights">
+                        </a>
+                        <div class="service-info">
+                            <h4>Solar Street Lights</h4>
+                            <p class="text-muted small">Automatic, standalone lighting solutions for societies and
+                                industries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h5 class="text-primary text-uppercase">How It Works</h5>
+                <h2>Your Journey to Free Electricity</h2>
+            </div>
+
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card mt-3">
+                        <div class="step-number">1</div>
+                        <span class="iconify fs-1 text-primary mb-3" data-icon="carbon:document-view"></span>
+                        <h5>Site Survey</h5>
+                        <p class="small text-muted mb-0">We check your roof shadow and strength to design the perfect
+                            layout.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card mt-3">
+                        <div class="step-number">2</div>
+                        <span class="iconify fs-1 text-primary mb-3" data-icon="carbon:user-identification"></span>
+                        <h5>Registration</h5>
+                        <p class="small text-muted mb-0">We handle all PM Surya Ghar & DISCOM paperwork for you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card mt-3">
+                        <div class="step-number">3</div>
+                        <span class="iconify fs-1 text-primary mb-3" data-icon="carbon:tools"></span>
+                        <h5>Installation</h5>
+                        <p class="small text-muted mb-0">Our expert team installs the structure and panels in just 1-2
+                            days.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-card mt-3">
+                        <div class="step-number">4</div>
+                        <span class="iconify fs-1 text-primary mb-3" data-icon="carbon:currency-rupee"></span>
+                        <h5>Subsidy & Savings</h5>
+                        <p class="small text-muted mb-0">Net-meter is installed and you get ₹78,000 subsidy in your
+                            bank.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h5 class="text-primary text-uppercase">Happy Clients</h5>
+                <h2>What Vadodara Says About Namah Solar</h2>
+            </div>
+
+            <div class="swiper testimonial-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card text-center">
+                            <div class="stars mb-3">
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                            </div>
+                            <p class="fst-italic text-muted">"Excellent service! They installed the elevated structure
+                                perfectly so we can still use our terrace for Uttarayan. My bill dropped from ₹3000 to
+                                zero."</p>
+                            <h6 class="mt-3 fw-bold">- Rajesh Patel, Manjalpur</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card text-center">
+                            <div class="stars mb-3">
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-half"></span>
+                            </div>
+                            <p class="fst-italic text-muted">"Very professional team. They handled the entire subsidy
+                                process with the government portal. I received my ₹78,000 subsidy within 25 days."</p>
+                            <h6 class="mt-3 fw-bold">- Amit Shah, Alkapuri</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card text-center">
+                            <div class="stars mb-3">
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                                <span class="iconify" data-icon="bi:star-fill"></span>
+                            </div>
+                            <p class="fst-italic text-muted">"I installed a 5kW system for my bungalow. The finishing is
+                                neat and wiring is hidden properly. Highly recommend Namah Solar Energy."</p>
+                            <h6 class="mt-3 fw-bold">- Sneha Desai, Vasna Road</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination position-relative mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <h5 class="text-primary text-uppercase">Common Questions</h5>
+                        <h2>Everything You Need to Know</h2>
+                    </div>
+
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne">
+                                    How much subsidy will I get?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Under the PM Surya Ghar Muft Bijli Yojana, you get a fixed subsidy of
+                                    <strong>₹30,000 for 1kW</strong>, <strong>₹60,000 for 2kW</strong>, and
+                                    <strong>₹78,000 for systems 3kW and above</strong>. The amount is credited directly
+                                    to your bank account.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo">
+                                    What documents are required?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    You mainly need:
+                                    <ul class="mb-0 mt-2">
+                                        <li>Latest Electricity Bill</li>
+                                        <li>Aadhaar Card</li>
+                                        <li>Property Ownership Proof (Vera Bill/Index Copy)</li>
+                                        <li>Cancelled Cheque (for subsidy transfer)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree">
+                                    Does the solar system work during a power cut?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Standard <strong>On-Grid</strong> systems (which are subsidy eligible) do
+                                    <strong>not</strong> work during power cuts for safety reasons (to protect linemen
+                                    working on the grid). If you need power during outages, you need a Hybrid system
+                                    with batteries, but subsidy rules may differ.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour">
+                                    How much maintenance is required?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-muted">
+                                    Very little! The system has no moving parts. You only need to <strong>clean the
+                                        panels with water every 15-20 days</strong> to remove dust and bird droppings.
+                                    We also provide maintenance packages if you prefer professional cleaning.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="contact-info-box d-flex flex-column justify-content-between h-100 p-4 rounded-4"
+                        style="background: var(--primary);">
+                        <div>
+                            <h3 class="mb-4 text-white">Contact Us</h3>
+                            <p class="mb-4 text-white-50">Have questions about subsidy or installation? Reach out to us
+                                directly.</p>
+
+                            <div class="mb-4 d-flex align-items-start">
+                                <span class="iconify fs-3 me-3 text-warning" data-icon="carbon:location-filled"></span>
+                                <div class="text-white">
+                                    <h6 class="mb-1 text-white">Address</h6>
+                                    <small style="opacity:0.8"><a target="_blank"
+                                            href="https://maps.google.com/?q=Namah+Solar+Energy+Vadodara">Shop 19, 4th
+                                            Floor, Raama Esquire, Near Tithi Heights, Gotri, Vadodara -
+                                            390021</a></small>
+                                </div>
+                            </div>
+
+                            <div class="mb-4 d-flex align-items-center">
+                                <span class="iconify fs-3 me-3 text-warning" data-icon="carbon:phone-filled"></span>
+                                <div>
+                                    <h6 class="mb-0 text-white">Phone</h6>
+                                    <a href="tel:+919081999400" class="text-white text-decoration-none small">+91 90819
+                                        99400</a>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 d-flex align-items-center">
+                                <span class="iconify fs-3 me-3 text-warning" data-icon="carbon:time-filled"></span>
+                                <div>
+                                    <h6 class="mb-0 text-white">Hours</h6>
+                                    <small class="text-white-50">Mon - Sat: 9:00 AM - 7:00 PM</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 rounded-3 overflow-hidden" style="height: 180px;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3691.853340702336!2d73.1661598!3d22.2835447!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc61adbb95fbd%3A0xa40b470ec1f83f94!2sSolarize%20Renewables%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1769226627227!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="zoom-in">
+                    <div class="form-container bg-white p-4 p-md-5 rounded-4 shadow-lg">
+                        <div class="text-center mb-4">
+                            <h2 class="h3 fw-bold">Get a Free <span class="text-primary">Site Survey</span></h2>
+                            <p class="text-muted small">Fill the details below and we will reply instantly on WhatsApp
+                                with a quote.</p>
+                        </div>
+
+                        <form id="whatsappForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-uppercase fw-bold text-muted">Name</label>
+                                    <input type="text" class="form-control bg-light border-0 py-2" id="name"
+                                        placeholder="Enter your name" required>
+                                    <div class="invalid-feedback">Required.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-uppercase fw-bold text-muted">Phone Number</label>
+                                    <input type="tel" class="form-control bg-light border-0 py-2" id="phone"
+                                        pattern="[0-9]{10}" placeholder="10-digit mobile no." required>
+                                    <div class="invalid-feedback">Valid 10-digit number required.</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label text-uppercase fw-bold text-muted">City / Village</label>
+                                    <input type="text" class="form-control bg-light border-0 py-2" id="city"
+                                        placeholder="e.g. Vadodara" required>
+                                    <div class="invalid-feedback">Required.</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label text-uppercase fw-bold text-muted">Roof Type</label>
+                                    <select class="form-select bg-light border-0 py-2" id="roof" required>
+                                        <option value="" selected disabled>Select Roof Type...</option>
+                                        <option value="Flat Concrete">Flat Concrete (Terrace)</option>
+                                        <option value="Tiled / Sloped">Tiled / Sloped Roof</option>
+                                        <option value="Industrial Sheet">Industrial / Metal Sheet</option>
+                                        <option value="Open Ground">Open Ground</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label class="form-label text-uppercase fw-bold text-muted">Avg. Monthly Bill
+                                        (₹)</label>
+                                    <select class="form-select bg-light border-0 py-2" id="bill" required>
+                                        <option value="" selected disabled>Select your bill range...</option>
+                                        <option value="Less than 1500">Less than ₹1,500</option>
+                                        <option value="1500 - 3000">₹1,500 - ₹3,000</option>
+                                        <option value="3000 - 5000">₹3,000 - ₹5,000</option>
+                                        <option value="Above 5000">Above ₹5,000</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label text-uppercase fw-bold text-muted">Message
+                                        (Optional)</label>
+                                    <textarea class="form-control bg-light border-0" id="message" rows="2"
+                                        placeholder="Any specific requirements?"></textarea>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit"
+                                        class="btn btn-success w-100 rounded-pill py-3 fw-bold shadow-sm">
+                                        <span class="iconify me-2" data-icon="logos:whatsapp-icon"
+                                            style="font-size: 1.2rem;"></span>
+                                        Get Quote on WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none mb-3">
+                        <img src="images/logo.webp" alt="" class="footer-logo">
+                    </a>
+                    <p class="text-white-50 mb-4">
+                        Authorized vendor for PM Surya Ghar Yojana. We are committed to making Gujarat greener, one roof
+                        at a time, with premium solar solutions.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <a target="_blank" href="https://www.facebook.com/namahsolarenergy/" class="social-btn"
+                            aria-label="Facebook"><span class="iconify" data-icon="bi:facebook"></span></a>
+                        <a target="_blank" href="https://www.instagram.com/namahsolarenergy/" class="social-btn"
+                            aria-label="Instagram"><span class="iconify" data-icon="bi:instagram"></span></a>
+                        <a target="_blank" href="https://www.indiamart.com/namah-solar-energy/aboutus.html"
+                            class="social-btn" aria-label="IndiaMart"><span class="iconify"
+                                data-icon="simple-icons:indiamart"></span></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-white mb-3 fw-bold">Quick Links</h5>
+                    <div class="d-flex flex-column">
+                        <a href="#hero" class="footer-link">
+                            <span class="iconify me-2 small text-secondary d-none d-md-inline"
+                                data-icon="bi:chevron-right"></span>Home
+                        </a>
+                        <a href="#benefits" class="footer-link">
+                            <span class="iconify me-2 small text-secondary d-none d-md-inline"
+                                data-icon="bi:chevron-right"></span>Benefits
+                        </a>
+                        <a href="#subsidy" class="footer-link">
+                            <span class="iconify me-2 small text-secondary d-none d-md-inline"
+                                data-icon="bi:chevron-right"></span>Subsidy Rates
+                        </a>
+                        <a href="#services" class="footer-link">
+                            <span class="iconify me-2 small text-secondary d-none d-md-inline"
+                                data-icon="bi:chevron-right"></span>Our Services
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3 fw-bold">Our Solutions</h5>
+                    <div class="d-flex flex-column">
+                        <a href="#services" class="footer-link">
+                            <span class="iconify me-2 small text-secondary d-none d-md-inline"
+                                data-icon="bi:chevron-right"></span>Residential Rooftop
+                        </a>
+                        <a href="#services" class="footer-link">
+                            <span class="iconify me-2 small text-secondary d-none d-md-inline"
+                                data-icon="bi:chevron-right"></span>Commercial EPC
+                        </a>
+                        <a href="#services" class="footer-link">
+                            <span class="iconify me-2 small text-secondary d-none d-md-inline"
+                                data-icon="bi:chevron-right"></span>Industrial Solar
+                        </a>
+                        <a href="#services" class="footer-link">
+                            <span class="iconify me-2 small text-secondary d-none d-md-inline"
+                                data-icon="bi:chevron-right"></span>Solar Water Pumps
+                        </a>
+                        <a href="#services" class="footer-link">
+                            <span class="iconify me-2 small text-secondary d-none d-md-inline"
+                                data-icon="bi:chevron-right"></span>Cleaning & Maint.
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-white mb-3 fw-bold">Get In Touch</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3 d-flex justify-content-center justify-content-md-start ">
+                            <span class="iconify text-warning me-2 mt-1 col-auto"
+                                data-icon="carbon:location-filled"></span>
+                            <a class="footer-link addressLi" target="_blank"
+                                href="https://maps.google.com/?q=Namah+Solar+Energy+Vadodara">Shop 19, Raama Esquire,
+                                Near Tithi Heights, Gotri,
+                                Vadodara - 390021</a>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-center justify-content-md-start">
+                            <span class="iconify text-warning me-2 mt-1" data-icon="carbon:phone-filled"></span>
+                            <a class="footer-link" href="tel:+919081999400">+91 90819 99400</a>
+                        </li>
+                        <li class="d-flex justify-content-center justify-content-md-start">
+                            <span class="iconify text-warning me-2 mt-1" data-icon="carbon:email"></span>
+                            <a class="footer-link" href="mailto:info@namahsolar.com">info@namahsolar.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-secondary mt-4 mb-4 opacity-25">
+
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-white-50 small text-center">© 2026 Namah Solar Energy. All Rights
+                        Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <script>
+        // 1. Initialize AOS (Animations)
+        AOS.init({ duration: 800, once: true, offset: 50 });
+
+        // 2. Fancybox (Image Gallery)
+        Fancybox.bind("[data-fancybox]", {});
+
+        // 3. Hero Swiper (Slider)
+        new Swiper(".hero-swiper", {
+            loop: true,
+            effect: "fade",
+            // autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: ".swiper-paginationHero", clickable: true },
+        });
+
+        // 4. Isotope Filtering (Services)
+        window.onload = function () {
+            var grid = document.querySelector('.service-grid');
+            if (grid) {
+                var iso = new Isotope(grid, {
+                    itemSelector: '.service-item',
+                    layoutMode: 'fitRows'
+                });
+
+                // Filter buttons
+                var filtersElem = document.querySelector('.filters-button-group');
+                filtersElem.addEventListener('click', function (event) {
+                    if (!matchesSelector(event.target, 'button')) { return; }
+                    var filterValue = event.target.getAttribute('data-filter');
+                    iso.arrange({ filter: filterValue });
+
+                    filtersElem.querySelector('.active').classList.remove('active');
+                    event.target.classList.add('active');
+                });
+            }
+        };
+
+        function matchesSelector(elem, selector) {
+            return elem.matches ? elem.matches(selector) : elem.msMatchesSelector(selector);
+        }
+
+        // 5. Navbar Scroll Effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-sm');
+                navbar.style.background = "rgba(255, 255, 255, 0.98)";
+            } else {
+                navbar.classList.remove('shadow-sm');
+                navbar.style.background = "rgba(255, 255, 255, 0.95)";
+            }
+        });
+
+        // 6. WhatsApp Form Logic (Debounce + Mobile Check)
+        // Paste this script at the bottom of your body, replacing the previous form script
+        (function () {
+            'use strict'
+            const form = document.getElementById('whatsappForm');
+            if (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if (!form.checkValidity()) {
+                        form.classList.add('was-validated');
+                        return;
+                    }
+
+                    // 1. Capture All Values
+                    const name = document.getElementById('name').value;
+                    const phone = document.getElementById('phone').value;
+                    const city = document.getElementById('city').value; // New
+                    const roof = document.getElementById('roof').value; // New
+                    const bill = document.getElementById('bill').value;
+                    const message = document.getElementById('message').value;
+
+                    // 2. Client Phone
+                    const clientPhone = "919081999400";
+
+                    // 3. Construct Detailed Message
+                    const text = `*New Solar Inquiry - Namah Solar Energy*\n\n` +
+                        `*Name:* ${name}\n` +
+                        `*Phone:* ${phone}\n` +
+                        `*City:* ${city}\n` +
+                        `*Roof Type:* ${roof}\n` +
+                        `*Avg Bill:* ${bill}\n` +
+                        `*Message:* ${message || 'N/A'}`;
+
+                    // 4. Send
+                    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                    const baseUrl = isMobile ? `https://api.whatsapp.com/send` : `https://web.whatsapp.com/send`;
+                    window.open(`${baseUrl}?phone=${clientPhone}&text=${encodeURIComponent(text)}`, '_blank');
+
+                    form.reset();
+                    form.classList.remove('was-validated');
+                }, false);
+            }
+        })();
+
+        // --- Testimonial Swiper ---
+        new Swiper(".testimonial-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: { delay: 4000 },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            breakpoints: {
+                768: { slidesPerView: 2 }, // Show 2 slides on tablets
+                992: { slidesPerView: 3 }  // Show 3 slides on desktops
+            }
+        });
+    </script>
+</body>
+
+</html>
